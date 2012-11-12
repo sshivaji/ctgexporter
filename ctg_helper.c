@@ -274,16 +274,16 @@ void ctg_iterate_page(int page_index) {
         for (int j = 1; j < entry_size; ++j) entry->moves[j - 1] = buf[pos + j];
         entry->num_moves = (entry_size - 1) / 2;
 
-//        #ifdef DEBUG
-//            printf("entry->num_moves: %d\n", entry->num_moves);
-//        #endif
+        #ifdef DEBUG
+            printf("entry->num_moves: %d\n", entry->num_moves);
+        #endif
 
         pos += entry_size;
         entry->total = read_24(buf, pos);
 
-//        #ifdef DEBUG
-//            printf("entry->total: %d\n", entry->total);
-//        #endif
+        #ifdef DEBUG
+            printf("entry->total: %d\n", entry->total);
+        #endif
 
         pos += 3;
         entry->losses = read_24(buf, pos);
@@ -309,6 +309,7 @@ void ctg_iterate_page(int page_index) {
 
         pos += 1;
         entry->comment = buf[pos];
+//        pos += 33;
     }
 }
 
