@@ -10,6 +10,13 @@ page_bounds_t page_bounds;
 FILE* ctg_file = NULL;
 FILE* cto_file = NULL;
 
+/**
+ * This opens a CTG file and requires ctb and cto files.
+ * TODO: Support opening a file with only .ctg and .ctb and .cto missing.
+ * @param filename
+ * @return 
+ */
+
 bool init_ctg_book(char* filename) {
     int name_len = strlen(filename);
     assert(filename[name_len - 3] == 'c' &&
@@ -220,7 +227,7 @@ bool init_ctg_book(char* filename) {
 //}
 
 /*
- * Iterate ctg entries given a page index.
+ * Iterate all ctg entries for a given file.
  */
 
 void ctg_iterate_all_entries() {
@@ -229,6 +236,9 @@ void ctg_iterate_all_entries() {
     }
 }
 
+ /* 
+  * Iterate all ctg entries for a particular page.
+  */
 void ctg_iterate_page(int page_index) {
     // Pages are a uniform 4096 bytes.
     uint8_t buf[4096];
