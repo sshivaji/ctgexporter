@@ -260,8 +260,8 @@ void ctg_iterate_page(int page_index) {
         //        }
 
         //        if (!equal) {
-        //            pos += entry_size + buf[pos + entry_size] + 33;
-        //            continue;
+//                    pos += entry_size + buf[pos + entry_size] + 33;
+//                    continue;
         //        }
 
         // Found it, fill in the entry and return. Annoyingly, most of the
@@ -309,7 +309,7 @@ void ctg_iterate_page(int page_index) {
 
         pos += 1;
         entry->comment = buf[pos];
-//        pos += 33;
+//        pos += 2;
     }
 }
 
