@@ -12,7 +12,7 @@ FILE* cto_file = NULL;
 
 /**
  * This opens a CTG file and requires ctb and cto files.
- * TODO: Support opening a file with only .ctg and .ctb and .cto missing.
+ * TODO: Support opening a file with only .ctg and .ctb and .cto missing. Use code from Sebasien Major's implementation.
  * @param filename
  * @return 
  */

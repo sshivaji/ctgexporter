@@ -20,7 +20,7 @@ all: ctg_exporter .depend Makefile
 ctg_exporter: .depend $(Ctg_Obj) $(Ctg_Hdr)
 	$(CC) $(CFLAGS) $(LIBS) -o ctg_exporter $(Ctg_Obj)
 
-.depend: Makefile $(Ctg_Reader_Hdr)
+.depend: Makefile
 	$(CC) -MM $(CSTR) $(Ctg_Src) | $(SED) 's/:/: Makefile/g' >$@
 
 clean:

@@ -10,4 +10,4 @@ Usage:
   1. Simple CTG file with 3 book moves is in the examples folder (simple.ctg).
 
 Credits and License:
-CTG parsing code was taken from https://github.com/AaronBecker/daydreamer
+CTG parsing code was taken from https://github.com/AaronBecker/daydreamer. Code to parse CTG without using .cto and .ctb was taken from Sebastien Major. Code to output CTG to key value DBs was also derived from Sebastien Major.

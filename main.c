@@ -25,7 +25,7 @@ int main(int argc, char* argv[]) {
      * uint16 colour;
      * };
      * 4. Add all moves from step 2 to the book entry of step 3.
-     * 5. Write extra fields to a leveldb database
+     * 5. Write extra fields to a leveldb database following Sebastien Major's example.
      *
      * 
      */    
