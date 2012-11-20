@@ -1,10 +1,10 @@
 LIBS =
-CFLAGS =  -Wall -D_GNU_SOURCE -std=c99 -DDEBUG
+CFLAGS =  -Wall -D_GNU_SOURCE -DDEBUG
 CSTR =
 
-Ctg_Src =	main.c ctg_helper.c \
+Ctg_Src =	*.cpp
 
-Ctg_Hdr = 	ctg_helper.h
+Ctg_Hdr = 	*.h
 
 Ctg_Obj = $(Ctg_Src:.c=.o)
 
