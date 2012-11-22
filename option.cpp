@@ -166,7 +166,10 @@ bool option_get_bool(const char var[]) {
    val = option_get(var);
 
    if (false) {
-   } else if (my_string_case_equal(val,"true") || my_string_case_equal(val,"yes") || my_string_equal(val,"1")) {
+   } else if (val == NULL) { 
+      return false;
+   }
+     else if (my_string_case_equal(val,"true") || my_string_case_equal(val,"yes") || my_string_equal(val,"1")) {
       return true;
    } else if (my_string_case_equal(val,"false") || my_string_case_equal(val,"no") || my_string_equal(val,"0")) {
       return false;

@@ -224,7 +224,7 @@ void board_clear(board_t * board) {
 // board_start()
 
 void board_start(board_t * board) {
-   printf("in board_start");
+//   printf("in board_start");
    ASSERT(board!=NULL);
 
    if (!board_from_fen(board,StartFen)) ASSERT(false);
@@ -459,10 +459,10 @@ void board_disp(const board_t * board) {
    int file, rank, sq;
    int piece, c;
    char fen[256];
-   my_log("before checking board\n");
+//   my_log("before checking board\n");
 
    ASSERT(board!=NULL);
-   my_log("board is not null\n");
+//   my_log("board is not null\n");
    if (!board_to_fen(board,fen,256)) ASSERT(false);
    my_log("POLYGLOT %s\n",fen);
    my_log("POLYGLOT\n");

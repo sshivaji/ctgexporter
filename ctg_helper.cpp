@@ -271,9 +271,9 @@ static void print_signature(ctg_signature_t* sig)
   */
 void ctg_iterate_page(int page_index) {
 //    board_t board[1];
-//    my_log_open("ctg.log");
+//    my_log_open("ctgexporter.log");
 //    board_start(board);
-////    board_clear(board);
+//////    board_clear(board);
 //    board_disp(board);
 
     // Pages are a uniform 4096 bytes.
@@ -289,8 +289,6 @@ void ctg_iterate_page(int page_index) {
     int pos = 4;
     for (int i = 0; i < num_positions; ++i) {
         int entry_size = buf[pos] % 32;
-
-        
 
         ctg_signature_t ctg_signature;
         ctg_signature_t *signature = &ctg_signature;

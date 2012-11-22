@@ -281,8 +281,6 @@ bool board_to_fen(const board_t * board, char string[], int size) {
    ASSERT(board_is_ok(board));
    ASSERT(string!=NULL);
    ASSERT(size>=92);
-
-   my_log("in board to fen\n");
    
    // init
 
@@ -379,7 +377,7 @@ bool board_to_fen(const board_t * board, char string[], int size) {
    string[pos++] = ' ';
 
    // halfmove clock and fullmove number
-   my_log("Before outputing fen\n");
+//   my_log("Before outputing fen\n");
    sprintf(&string[pos],"%d %d",board->ply_nb,board->move_nb+1);
 
    return true;
