@@ -8,13 +8,12 @@ Ctg_Hdr = 	*.h
 
 Ctg_Obj = $(Ctg_Src:.c=.o)
 
-CP = /bin/cp
-MKDIR = /bin/mkdir
-RM = /bin/rm
-SED = /bin/sed
-TAR = /bin/tar
-CC = /usr/bin/gcc
-SED = /usr/bin/sed
+CP = cp
+MKDIR = mkdir
+RM = rm
+SED = sed
+TAR = tar
+CC = gcc
 all: ctg_exporter .depend Makefile
 
 ctg_exporter: .depend $(Ctg_Obj) $(Ctg_Hdr)

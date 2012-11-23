@@ -295,9 +295,9 @@ void ctg_iterate_page(int page_index) {
         signature->buf_len = entry_size;
         for (int j = 1; j < entry_size; ++j) 
             signature->buf[j - 1] = buf[pos + j];
-        
-        print_signature(signature);
-        
+        #ifdef DEBUG
+            print_signature(signature);
+        #endif
         pos += entry_size;
         entry_size = buf[pos];
         ctg_entry_t ctg_entry;
