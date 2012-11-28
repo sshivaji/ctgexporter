@@ -3,6 +3,7 @@
 #include <string.h> /* strerror */
 #include <stdio.h>
 #include <assert.h>
+#include <vector>
 
 extern bool big_endian;
 
@@ -46,6 +47,12 @@ typedef struct {
     int low;
     int high;
 } page_bounds_t;
+
+typedef struct {
+    std::vector<bool> bits;
+    std::vector<bool> residue;
+    int residue_length;
+} bits_t;
 
 bool init_ctg_book(char* filename);
 //bool ctg_get_page_index(int hash, int* page_index);

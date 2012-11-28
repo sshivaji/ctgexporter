@@ -1,4 +1,4 @@
-LIBS = -lm
+LIBS = -lm -lstdc++
 CFLAGS =  -Wall -D_GNU_SOURCE -DDEBUG
 CSTR =
 
