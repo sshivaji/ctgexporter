@@ -17,7 +17,7 @@ CC = gcc
 all: ctg_exporter .depend Makefile
 
 ctg_exporter: .depend $(Ctg_Obj) $(Ctg_Hdr)
-	$(CC) $(CFLAGS) $(LIBS) -o ctg_exporter $(Ctg_Obj)
+	$(CC) $(CFLAGS) -o ctg_exporter $(Ctg_Obj) $(LIBS)
 
 .depend: Makefile
 	$(CC) -MM $(CSTR) $(Ctg_Src) | $(SED) 's/:/: Makefile/g' >$@

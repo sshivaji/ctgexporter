@@ -246,7 +246,7 @@ void ctg_iterate_all_entries() {
 void parse_bits(bits_t *bits, int& square) {
 
     //    printf("Bits[0] is %d%d%d%d%d%d%d%d", bits[0], bits[1], bits[2], bits[3], bits[4], bits[5], bits[6], bits[7]);
-    u_int16_t pos = 0;
+    uint16_t pos = 0;
     //    int bits_remaining = 8;
     bool match = true;
 
